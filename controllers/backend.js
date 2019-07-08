@@ -9,7 +9,12 @@ const Class = mongoose.model('Class');
 
 'use strict';
 
-const JSESSIONID = 'DF5E49FBAEF45E44B0CF408EF615A1D2';
+if (process.argv.length != 3) {
+    console.log("Must have one parameter (JSESSIONID)!");
+    process.exit();
+}
+
+const JSESSIONID = process.argv[2];
 const LIVE_DB = 'mongodb://localhost:27017/drexel-schedule';
 
 mongoose.connect(LIVE_DB);
