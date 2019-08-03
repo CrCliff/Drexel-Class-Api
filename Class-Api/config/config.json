@@ -26,6 +26,8 @@
   "mongoose": {
     "db": {
       "path": "mongoose/db.js"
-    }
+    },
+    "endpoint": "mongodb://localhost:27017/",
+    "resource": "drexel-schedule"
   }
 }

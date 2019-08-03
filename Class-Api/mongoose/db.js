@@ -9,16 +9,7 @@ const secret_common = require(secret["secret_common"]);
 
 require(secret_common['project_root'] + config_common['models']['class']['path']);
 
-let URI;
-const PROD_DB = 'mongodb://localhost:27017/prod';
-const LIVE_DB = 'mongodb://localhost:27017/drexel-schedule';
-
-if ( process.env.NODE_ENV === 'prod' ) {
-  URI = PROD_DB;
-}
-else {
-  URI = LIVE_DB;
-}
+const URI = config['mongoose']['endpoint'] + config['mongoose']['resource'];
 
 mongoose.connect( URI );
 
