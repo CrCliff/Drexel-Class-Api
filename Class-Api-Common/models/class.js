@@ -10,16 +10,6 @@ var attributeSchema = new mongoose.Schema( {
 } );
 
 /* subdocument */
-/*
-var prereqSchema = new mongoose.Schema( {
-  SubjCodePreq: String,
-  CrseNumbPreq: String,
-  MinGrde: String,
-  LevlCode: String
-} );
-*/
-
-/* subdocument */
 var meetingSchema = new mongoose.Schema( {
   BeginTime: String,
   EndTime: String,
@@ -53,15 +43,8 @@ var sectionSchema = new mongoose.Schema( {
   Meetings: [meetingSchema]
 } );
 
-var classSchema = new mongoose.Schema( {
+module.exports.schema = new mongoose.Schema({
   Attributes: attributeSchema,
   Prereqs: String,
   Sections: [sectionSchema]
 } );
-
-mongoose.model( 'Class', classSchema, 'classes' );
-/*
-mongoose.model( 'Prereq', prereqSchema );
-mongoose.model( 'Meeting', meetingSchema );
-mongoose.model( 'Section', sectionSchema );
-*/

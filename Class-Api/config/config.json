@@ -1,0 +1,31 @@
+﻿{
+  "app": {
+    "path": "app.js"
+  },
+  "controllers": {
+    "class": {
+      "path": "controllers/class.js"
+    }
+  },
+  "views": {
+    "index": {
+      "path": "views/index.jade"
+    },
+    "error": {
+      "path": "views/error.jade"
+    },
+    "layout": {
+      "path": "views/layout.jade"
+    }
+  },
+  "routes": {
+    "index": {
+      "path": "routes/index.js"
+    }
+  },
+  "mongoose": {
+    "db": {
+      "path": "mongoose/db.js"
+    }
+  }
+}

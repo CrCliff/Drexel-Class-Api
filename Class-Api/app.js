@@ -6,9 +6,17 @@ const cookieParser = require('cookie-parser');
 const logger = require('morgan');
 const cors = require('cors');
 
-require('./models/db');
+const config = require('./config/config.json');
+const secret = require('./config/config.secret.json');
 
-const indexRouter = require('./routes/index');
+const config_common = require(secret['config_common']);
+const secret_common = require(secret['secret_common']);
+
+// require models/db.js
+require(secret['project_root'] + config['mongoose']['db']['path']);
+
+// require routes/index.js
+const indexRouter = require(secret["project_root"] + config["routes"]["index"]["path"]);
 
 const app = express();
 
@@ -24,7 +32,6 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use(cors());
 
 app.use('/', indexRouter);
-app.use('/user', indexRouter);
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {

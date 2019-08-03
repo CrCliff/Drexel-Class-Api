@@ -1,13 +1,13 @@
-// Chris Clifford
-// 1/2019
-//
-// Database for eve-nix RP
-// 
-
 const mongoose = require( 'mongoose' );
 const readLine = require( 'readline' );
-require( './users' );
-require( './class' );
+
+const config = require('../config/config.json');
+const secret = require('../config/config.secret.json');
+
+const config_common = require(secret["config_common"]);
+const secret_common = require(secret["secret_common"]);
+
+require(secret_common['project_root'] + config_common['models']['class']['path']);
 
 let URI;
 const PROD_DB = 'mongodb://localhost:27017/prod';

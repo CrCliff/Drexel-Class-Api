@@ -1,0 +1,16 @@
+{
+  "name": "class-api-db-loader",
+  "version": "0.0.0",
+  "description": "Class-Api-DbLoader",
+  "main": "app.js",
+  "author": {
+    "name": ""
+  },
+  "dependencies": {
+    "mongoose": "^5.6.8",
+    "request": "^2.88.0",
+    "request-promise": "^4.2.4",
+    "selenium-webdriver": "^4.0.0-alpha.4",
+    "xml-js": "^1.6.11"
+  }
+}

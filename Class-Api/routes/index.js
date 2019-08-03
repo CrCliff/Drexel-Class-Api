@@ -7,7 +7,12 @@
 const express = require( 'express' );
 const router = express.Router();
 const jwt = require( 'express-jwt' );
-const ctrlClass = require( '../controllers/class' );
+
+const config = require('../config/config.json');
+const secret = require('../config/config.secret.json');
+
+// get controllers/class.js
+const ctrlClass = require(secret["project_root"] + config["controllers"]["class"]["path"]);
 
 router.get( '/class', ctrlClass.getClass );
 router.get( '/class/subjlist', ctrlClass.getSubjList );

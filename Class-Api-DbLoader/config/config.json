@@ -1,0 +1,13 @@
+﻿{
+  "mongoose": {
+    "endpoint": "mongodb://localhost:27017/",
+    "resource": "drexel-schedule"
+  },
+  "drexel-one": {
+    "url": "https://one.drexel.edu/"
+  },
+  "degree-works": {
+    "url": "https://dwapps.drexel.edu/dw/dashboard?SCRIPT=SD2WORKS"
+  }
+}
+

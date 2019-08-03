@@ -1,0 +1,23 @@
+{
+  "websites": {
+    "drexel-one": {
+      "url": "https://one.drexel.edu"
+    },
+    "degree-works": {
+      "url": "https://dwapps.drexel.edu/dw/dashboard?SCRIPT=SD2WORKS"
+    }
+  },
+  "models": {
+    "class": {
+      "path": "models/class.js"
+    },
+    "db": {
+      "path": "models/db.js"
+    }
+  },
+  "data": {
+    "subjects": {
+      "path": "data/subjects.json"
+    }
+  }
+ }

@@ -1,7 +1,17 @@
 const mongoose = require('mongoose');
-const Class = mongoose.model('Class');
 
-const subj_codes = require('./subjects.json');
+const config = require('../config/config.json');
+const secret = require('../config/config.secret.json');
+
+const config_common = require(secret['config_common']);
+const secret_common = require(secret['secret_common']);
+
+const classModel = require(secret_common['project_root'] + config_common['models']['class']['path']);
+const subj_codes = require(secret_common['project_root'] + config_common['data']['subjects']['path']);
+
+mongoose.model('Class', classModel.schema, 'classes');
+
+const Class = mongoose.model('Class');
 
 const sendJSONResp = function (res, status, content) {
     res.status(status);

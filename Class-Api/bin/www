@@ -4,7 +4,10 @@
  * Module dependencies.
  */
 
-var app = require('../app');
+const config = require('../config/config.json');
+const secret = require('../config/config.secret.json');
+
+var app = require(secret['project_root'] + config['app']['path']);
 var debug = require('debug')('app-api:server');
 var http = require('http');
 
