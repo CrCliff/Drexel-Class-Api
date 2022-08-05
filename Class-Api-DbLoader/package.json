@@ -7,7 +7,7 @@
     "name": ""
   },
   "dependencies": {
-    "mongoose": "^5.6.8",
+    "mongoose": "^5.7.5",
     "request": "^2.88.0",
     "request-promise": "^4.2.4",
     "selenium-webdriver": "^4.0.0-alpha.4",
